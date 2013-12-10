@@ -6,7 +6,7 @@
  * @author: 	Telshin
  * @license: 	All Rights Reserved
  * @package: 	PHPivotal
- * @link		http://www.curse.com/
+ * @link		http://www.telshin.com/
  *
 **/
 
