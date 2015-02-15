@@ -27,8 +27,7 @@ class phpivotal{
 	}
 
 /* Curl Function */
-	private function curlPivotal($method, $job, $data = null, $auth = false){
-		$debug = true;
+	private function curlPivotal($method, $job, $data = null, $auth = false, $debug = false){
 		//Build the URL for CURL
 		$job = str_replace( '&amp;', '&', urldecode(trim($job)));
 
