@@ -286,5 +286,15 @@ class phpivotal{
 		}
 		return $args;
 	}
+
+	private function buildUrl($task, $arguments = null) {
+		$url = $this->base.$task;
+			if ($arguments) {
+				$args = $this->curlArguments($arguments);
+				$url = $url . '/' . implode('&', $args);
+				$url = str_replace('&amp;', '&', urldecode(trim($url)));
+			}
+		return $url;
+	}
 }
 ?>
