@@ -287,6 +287,9 @@ class phpivotal{
 		return $args;
 	}
 
+	/**
+	 * buildURL
+	 */
 	private function buildUrl($task, $arguments = null) {
 		$url = $this->base.$task;
 			if ($arguments) {
