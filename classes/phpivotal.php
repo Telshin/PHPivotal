@@ -142,10 +142,12 @@ class phpivotal{
 
 	public function getMembership($projectid, $memberid = null){
 		//Setting up the URL
-		$url = $this->base.'/projects/'.intval($projectid).'/memberships'.($memberid ? '/'.intval($memberid) : '');
+		$task = '/projects/'.intval($projectid).'/memberships'.($memberid ? '/'.intval($memberid) : '');
+
+		$job = $this->buildUrl($task);
 
 		//Time to CURL the Member
-		$data = $this->curlPivotal('GET', $url);
+		$data = $this->curlPivotal('GET', $job);
 
 		return $this->verifyData($data);
 	}
