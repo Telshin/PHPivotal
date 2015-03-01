@@ -170,7 +170,9 @@ class phpivotal{
 
 	public function getIteration($projectid, $group, $arguements = null){
 		//Setting up the URL
-		$url = $this->base.'/projects/'.intval($projectid).'/iterations?'.$group;
+		$endpoint = '/projects/'.intval($projectid).'/iterations?'.$group;
+
+		$url = $this->buildUrl($endpoint);
 
 		//Time to get the Iteration
 		$data = $this->curlPivotal('GET', $url);
