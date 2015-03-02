@@ -175,7 +175,7 @@ class phpivotal{
 		$url = $this->buildUrl($endpoint);
 
 		//Time to get the Iteration
-		$data = $this->curlPivotal('GET', $url);
+		$data = $this->curlPivotal('GET', $url, $arguments);
 
 		return $this->verifyData($data);
 
