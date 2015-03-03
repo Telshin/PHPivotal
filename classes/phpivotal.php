@@ -4,7 +4,7 @@
  * PHPivotal Class File
  *
  * @author: 	Telshin
- * @license: 	All Rights Reserved
+ * @license: 	GNU GPLv3.0
  * @package: 	PHPivotal
  * @link		http://www.telshin.com/
  *
