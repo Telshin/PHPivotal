@@ -30,9 +30,17 @@ class phpivotal{
 		return $this->username;
 	}
 
+	private function setUsername($username) {
+		$this->username = $username;
+	}
+
 	private function getPassword() {
 		return $this->password;
 	} 
+
+	private function setPassword($password) {
+		$this->password = $password;
+	}
 
 /* Curl Function */
 	private function curlPivotal($method, $job, $data = null, $auth = false, $debug = false){
