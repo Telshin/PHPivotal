@@ -42,6 +42,14 @@ class phpivotal{
 		$this->password = $password;
 	}
 
+	private function getToken() {
+		return $this->token;
+	}
+
+	private function setToken($token) {
+		$this->token = $token;
+	}
+
 /* Curl Function */
 	private function curlPivotal($method, $job, $data = null, $auth = false, $debug = false){
 		//Build the URL for CURL
