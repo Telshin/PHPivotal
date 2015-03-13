@@ -22,7 +22,7 @@ class phpivotal{
 		if(!$token){
 			$this->token = $this->verifyToken($this->username, $this->password, $this->ssl);
 		} else {
-			$this->token = htmlspecialchars($token);
+			$this->setToken(htmlspecialchars($token));
 		}
 	}
 
