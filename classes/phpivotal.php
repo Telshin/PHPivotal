@@ -20,7 +20,7 @@ class phpivotal{
 	public function __construct($token = null, $username = null, $password =null){
 		//If we have no token, let's go fetch the token on the account. 
 		if(!$token){
-			$this->token = $this->verifyToken($this->username, $this->password, $this->ssl);
+			$this->setToken($this->verifyToken($this->username, $this->password, $this->ssl));
 		} else {
 			$this->setToken(htmlspecialchars($token));
 		}
