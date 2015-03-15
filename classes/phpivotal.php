@@ -209,8 +209,9 @@ class phpivotal{
 
 	public function getStory($projectid, $storyid = null){
 		//Setting up the URL
-		$url = $this->base.'/projects/'.intval($projectid).'/stories'.($storyid ? '/'.intval($storyid) : '');
+		$endpoint = '/projects/'.intval($projectid).'/stories'.($storyid ? '/'.intval($storyid) : '');
 
+		$url = $this->buildUrl($endpoint);
 		// Time to get the Story
 		$data = $this->curlPivotal('GET', $url);
 
