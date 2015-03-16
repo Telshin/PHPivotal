@@ -11,9 +11,24 @@
 **/
 
 class phpivotal{
+	/**
+	 * @var 	Pivtoal API Token
+	 */
 	private $token;
+
+	/**
+	 * @var 	Pivotal Username
+	 */
 	private $username;
+
+	/**
+	 * @var 	Pivotal Password
+	 */
 	private $password;
+
+	/**
+	 * @var 	Base URL for the Pivotal API
+	 */
 	private $base = 'https://www.pivotaltracker.com/services/v5';
 
 
