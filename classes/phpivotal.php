@@ -31,7 +31,13 @@ class phpivotal{
 	 */
 	private $base = 'https://www.pivotaltracker.com/services/v5';
 
-
+	/**
+	 * Main constructor
+	 * 
+	 * @param 	string 	Token
+	 * @param 	string 	Username
+	 * @param 	string 	Password
+ 	 */
 	public function __construct($token = null, $username = null, $password =null){
 		//If we have no token, let's go fetch the token on the account. 
 		if(!$token){
