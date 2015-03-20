@@ -249,7 +249,9 @@ class phpivotal{
 	 */
 	public function getProject($projectid = null) {
 		// Setting up the URL
-		$url = $this->base . '/projects' . ($projectid ? '/' . intval($projectid) : '');
+		$endpoint = '/projects' . ($projectid ? '/' . intval($projectid) : '');
+
+		$url = $this->buildUrl($endpoint)
 
 		// Time to CURL
 		$data = $this->curlPivotal('GET', $url);
