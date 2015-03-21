@@ -360,7 +360,9 @@ class phpivotal{
 	 */
 	public function addStory($projectid, $args) {
 		// Setting up the URL
-		$url = $this->base . '/projects/' . intval($projectid) . '/stories';
+		$endpoint = '/projects/' . intval($projectid) . '/stories';
+
+		$url = $this->buildUrl($endpoint, $args);
 
 		// Time to post the Story
 		$data = $this->curlPivotal('POST', $url, $args);
