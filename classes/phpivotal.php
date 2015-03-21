@@ -303,7 +303,9 @@ class phpivotal{
 	 */
 	public function removeMembership($projectid, $memberid) {
 		// Setting up the URL
-		$url = $this->base . '/projects/' . intval($projectid) . '/memberships/' . $memberid;
+		$endpoint = '/projects/' . intval($projectid) . '/memberships/' . $memberid;
+
+		$url = $this->buildUrl($endpoint); 
 
 		// Time to DEL the Member
 		$data = $this->curlPivotal('DELETE', $url);
