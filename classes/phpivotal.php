@@ -390,7 +390,9 @@ class phpivotal{
 	 */
 	public function deleteStory($projectid, $storyid) {
 		// Setting up the URL
-		$url = $this->base . '/projects/' . intval($projectid) . '/stories/' . intval($storyid);
+		$endpoint = '/projects/' . intval($projectid) . '/stories/' . intval($storyid);
+
+		$url = $this-.buildUrl($endpoint);
 
 		// Time to DEL this story
 		$data = $this->curlPivotal('DELETE', $url);
