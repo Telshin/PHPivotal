@@ -430,7 +430,9 @@ class phpivotal{
 	 */
 	public function getComments($projectid, $storyid) {
 		// setting up the URL
-		$url = $this->base . '/projects/' . intval($projectid) . '/stories/' . intval($storyid) . '/comments';
+		$endpoint = '/projects/' . intval($projectid) . '/stories/' . intval($storyid) . '/comments';
+
+		$url = $this->buildUrl($endpoint);
 
 		// Time to GET the comments
 		$data = $this->curlPivotal('GET', $url);
